@@ -1,38 +1,24 @@
 .App {
+  margin: 30px;
+  font-family: "DINPro";
+}
+
+.app_title {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.infinite-scroll-component {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  overflow: unset !important;
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+  font-family: "DINPro";
+  src: url("./assets/font/DINPro-Medium\ tr.ttf");
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+  font-family: "MyriadPro";
+  src: url("./assets/font/MYRIADPRO-REGULAR.OTF");
 }
