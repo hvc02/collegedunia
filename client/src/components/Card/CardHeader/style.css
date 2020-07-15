@@ -1,9 +1,10 @@
 .card_header {
   width: 637.3px;
   height: 233.2px;
-  /* background-color: url("../../../assets/images/college_02.jpg"); */
-  background: url("https://img.collegedekhocdn.com/media/img/institute/crawled_images/iitbombay.jpg?tr=w-250,h-150")
-    no-repeat center;
+
+  background: url("../../../assets/images/college_02.jpg") no-repeat center;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.71);
+
   display: flex;
   background-size: cover;
   flex-direction: column;
@@ -81,4 +82,5 @@
   font-size: 13px;
   line-height: 1.33;
   color: #ffffff;
+  margin-right: 10px;
 }

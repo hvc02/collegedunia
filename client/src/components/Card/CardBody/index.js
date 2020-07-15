@@ -1,23 +1,34 @@
 import React from "react";
 import "./style.css";
 
-export default function CardBody() {
+export default function CardBody(props) {
+  const {
+    college_name,
+    discount,
+    original_fees,
+    discounted_fees,
+    fees_cycle,
+    amenties,
+    famous_nearest_places,
+    nearest_place,
+    offertext,
+    rating,
+  } = props.data;
+
   return (
     <>
       <div className="card_body">
         <div className="body_description">
           <div className="description_college-name">
-            <span className="college-name">
-              Hansraj College Delhi University
-            </span>
+            <span className="college-name">{college_name}</span>
             <span className="ratings">
               &#9733;&#9733;&#9733;&#9733;
               <span className="hollow-star">&#9733;</span>
             </span>
           </div>
           <div className="description_location-row">
-            <span className="location">Near Dayanand Metro Bus station</span>
-            <span className="nearest-location">| 2 km away from bus stand</span>
+            <span className="location">{nearest_place[0]}</span>
+            <span className="nearest-location">| {nearest_place[1]}</span>
           </div>
 
           <div className="description_match-row">
@@ -42,21 +53,21 @@ export default function CardBody() {
 
         <div className="body_price-section">
           <div className="original-price_row">
-            <span className="original_price">&#8377;6354</span>
-            <div class="discount-label red">
-              <span>-10%</span>
+            <span className="original_price">&#8377;{original_fees}</span>
+            <div className="discount-label red">
+              <span>-{discount}%</span>
             </div>
           </div>
 
           <div className="discounted-price-row">
-            <span className="discounted-price">&#8377;5767</span>
-            <span className="per-semester">Per semester(3months)</span>
+            <span className="discounted-price">&#8377;{discounted_fees}</span>
+            <span className="per-semester">{fees_cycle}</span>
           </div>
 
           <div className="features">
-            <span className="free">Free Cancellation</span>
+            <span className="free">{amenties[0]}</span>
             <span className="dot">.</span>
-            <span className="wifi">Free wifi</span>
+            <span className="wifi">{amenties[1]}</span>
           </div>
         </div>
       </div>

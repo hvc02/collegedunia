@@ -3,11 +3,12 @@ import CardHeader from "./CardHeader";
 import CardBody from "./CardBody";
 import "./style.css";
 
-export default function Card() {
+export default function Card(props) {
+  // console.log("CARD: ", props);
   return (
     <div className="card">
-      <CardHeader />
-      <CardBody />
+      <CardHeader data={props.data} />
+      <CardBody data={props.data} />
     </div>
   );
 }
