@@ -10,7 +10,7 @@ class App extends React.Component {
 
     this.state = {
       data: colleges,
-      items: Array.from({ length: 4 }),
+      items: Array.from({ length: 5 }),
       hasMore: true,
     };
   }
@@ -26,7 +26,7 @@ class App extends React.Component {
     // 4 more records in 1.5 secs
     setTimeout(() => {
       this.setState({
-        items: this.state.items.concat(Array.from({ length: 4 })),
+        items: this.state.items.concat(Array.from({ length: 5 })),
       });
     }, 1500);
   };

@@ -16,7 +16,6 @@ export default function CardBody(props) {
 
   let offertextArray = offertext.split(" ");
   let famousPlacesArray = famous_nearest_places.split(" ");
-  console.log(famousPlacesArray);
   return (
     <>
       <div className="card_body">
