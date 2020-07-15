@@ -1,0 +1,14 @@
+.App {
+  margin: 30px;
+  font-family: "DINPro";
+}
+
+@font-face {
+  font-family: "DINPro";
+  src: url("./assets/font/DINPro-Medium\ tr.ttf");
+}
+
+@font-face {
+  font-family: "MyriadPro";
+  src: url("./assets/font/MYRIADPRO-REGULAR.OTF");
+}
