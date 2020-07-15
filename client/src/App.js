@@ -15,28 +15,24 @@ class App extends React.Component {
     };
   }
 
-  // state = {
-  //   items: Array.from({ length: 20 })
-  // };
-
   fetchMoreData = () => {
-    // a fake async api call like which sends
-    // 20 more records in 1.5 secs
+    //stop api call when all the data is popped
     if (this.state.items.length >= this.state.data.colleges.length) {
       this.setState({ hasMore: false });
       return;
     }
 
+    // a fake async api call like which sends
+    // 4 more records in 1.5 secs
     setTimeout(() => {
       this.setState({
         items: this.state.items.concat(Array.from({ length: 4 })),
       });
     }, 1500);
   };
+
   render() {
-    // console.log(this.state.items.length);
     const { data, items, hasMore } = this.state;
-    console.log(data.colleges);
     return (
       <div className="App">
         <h1 className="app_title">Colleges in North India</h1>
@@ -48,7 +44,7 @@ class App extends React.Component {
           loader={<h4>Loading...</h4>}
           endMessage={
             <p style={{ textAlign: "center" }}>
-              <b>Yay! You have seen it all</b>
+              <b>That's All Folks! You have seen it all</b>
             </p>
           }
         >

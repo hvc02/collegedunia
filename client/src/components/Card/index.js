@@ -4,7 +4,6 @@ import CardBody from "./CardBody";
 import "./style.css";
 
 export default function Card(props) {
-  // console.log("CARD: ", props);
   return (
     <div className="card">
       <CardHeader data={props.data} />

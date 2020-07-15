@@ -12,9 +12,11 @@ export default function CardBody(props) {
     famous_nearest_places,
     nearest_place,
     offertext,
-    rating,
   } = props.data;
 
+  let offertextArray = offertext.split(" ");
+  let famousPlacesArray = famous_nearest_places.split(" ");
+  console.log(famousPlacesArray);
   return (
     <>
       <div className="card_body">
@@ -34,18 +36,36 @@ export default function CardBody(props) {
           <div className="description_match-row">
             <span className="match">93% Match : </span>
             <span className="distance-from">
-              2.5Kms <span className="grey-text">from Gtb Nagar,</span>
-              7.5kms <span className="grey-text">from Gtb Nagar,</span>
+              {famousPlacesArray[0]}&nbsp;
+              <span className="grey-text">
+                {famousPlacesArray[1]} {famousPlacesArray[2]} &nbsp;
+                {famousPlacesArray[3]}
+              </span>
+              &nbsp;{famousPlacesArray[4]} {famousPlacesArray[5]}
+              <span className="grey-text">
+                {famousPlacesArray[6]}&nbsp; {famousPlacesArray[7]}&nbsp;
+                {famousPlacesArray[8]}
+              </span>
             </span>
           </div>
 
           <div className="description_offer-row">
             <span className="offers">
-              <span className="flat">Flat </span>
+              <span className="flat">{offertextArray[0]} </span>
               <span>
-                Rs<span className="price">2,000 </span> off + upto Rs{" "}
-                <span className="price">500</span> wallet! to avail...{" "}
-                <span className="login-text">Login</span>
+                Rs
+                <span className="price">
+                  {" "}
+                  {offertextArray[1]} {offertextArray[2]}
+                </span>
+                &nbsp;{offertextArray[3]}
+                &nbsp;{offertextArray[4]}
+                &nbsp;{offertextArray[5]}
+                <span className="price"> {offertextArray[6]}</span> &nbsp;
+                {offertextArray[7]}
+                &nbsp;{offertextArray[8]}
+                &nbsp;{offertextArray[9]}
+                <span className="login-text"> {offertextArray[10]}</span>
               </span>
             </span>
           </div>

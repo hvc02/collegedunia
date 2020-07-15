@@ -10,6 +10,7 @@
 .infinite-scroll-component {
   display: flex;
   flex-wrap: wrap;
+  overflow: unset !important;
 }
 
 @font-face {

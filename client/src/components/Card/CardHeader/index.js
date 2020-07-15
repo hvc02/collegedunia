@@ -2,7 +2,6 @@ import React from "react";
 import "./style.css";
 
 export default function CardHeader(props) {
-  console.log(props, "cardHeader");
   const { rating_remarks, promoted, rating, ranking, tags } = props.data;
 
   return (
