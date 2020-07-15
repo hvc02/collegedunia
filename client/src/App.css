@@ -3,6 +3,15 @@
   font-family: "DINPro";
 }
 
+.app_title {
+  text-align: center;
+}
+
+.infinite-scroll-component {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 @font-face {
   font-family: "DINPro";
   src: url("./assets/font/DINPro-Medium\ tr.ttf");

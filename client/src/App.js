@@ -10,7 +10,7 @@ class App extends React.Component {
 
     this.state = {
       data: colleges,
-      items: Array.from({ length: 2 }),
+      items: Array.from({ length: 4 }),
       hasMore: true,
     };
   }
@@ -29,7 +29,7 @@ class App extends React.Component {
 
     setTimeout(() => {
       this.setState({
-        items: this.state.items.concat(Array.from({ length: 2 })),
+        items: this.state.items.concat(Array.from({ length: 4 })),
       });
     }, 1500);
   };
@@ -39,7 +39,7 @@ class App extends React.Component {
     console.log(data.colleges);
     return (
       <div className="App">
-        {/* <Card /> */}
+        <h1 className="app_title">Colleges in North India</h1>
 
         <InfiniteScroll
           dataLength={items.length}
@@ -55,7 +55,6 @@ class App extends React.Component {
           {items.map((i, index) => (
             <>
               <Card key={index} data={data.colleges[index]}></Card>
-              <p>{index}</p>
             </>
           ))}
         </InfiniteScroll>

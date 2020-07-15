@@ -1,6 +1,6 @@
 .card_body {
-  width: 637.3px;
-  height: 143.2px;
+  width: 100%;
+  /* height: 143.2px; */
   /* background-color: cyan; */
   display: flex;
   /* justify-content: space-between; */
